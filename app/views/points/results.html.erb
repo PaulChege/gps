@@ -1,0 +1,25 @@
+<div>
+  <h3>5 Closest Points</h3>
+  <%= flash[:notice] %>
+  <table>
+    <thead>
+    <tr>
+      <th>Point</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Distance</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <% @points.each do |point| %>
+        <tr>
+          <td><%= point.point %></td>
+          <td><%= point.latitude %></td>
+          <td><%= point.longitude %></td>
+          <td><%= point.distance %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
